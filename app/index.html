@@ -134,8 +134,15 @@
                    // alert(xhttp.responseText);
                     var response = JSON.parse(xhttp.responseText);
 
+                    var myList = new Array();
+
+                    for(var item in response) {
+                      console.log(response[item].location);
+                      myList.push(new google.maps.LatLng(response[item].location.latitude, response[item].location.longitude));
+                    }
                     //create the list
 
+                    /*
                     return [
                       new google.maps.LatLng(51.0035671, 4.838756),
                       new google.maps.LatLng(51.0035671, 4.838756),
@@ -159,6 +166,8 @@
                       new google.maps.LatLng(51.0031572, 4.838754),
                       new google.maps.LatLng(51.0025473, 4.838753)
                     ];
+                    */
+                    return myList;
                   }
 
 
