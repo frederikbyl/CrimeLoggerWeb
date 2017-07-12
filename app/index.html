@@ -130,8 +130,11 @@
                     xhttp.open("GET", "http://localhost:8080/crimes", false);
                     xhttp.setRequestHeader("Content-type", "application/json");
                     xhttp.send();
-                    alert(xhttp.responseText);
+                    console.log(xhttp.responseText);
+                   // alert(xhttp.responseText);
                     var response = JSON.parse(xhttp.responseText);
+
+                    //create the list
 
                     return [
                       new google.maps.LatLng(51.0035671, 4.838756),
@@ -245,7 +248,6 @@
               <li class="mdl-menu__item">Dolor</li>
             </ul>
           </section>
-
           -->
 
           <section class="section--footer mdl-color--white mdl-grid">
@@ -253,14 +255,14 @@
               <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
             </div>
             <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
+              <h5>Crime statistics</h5>
               Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
             </div>
             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
               <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
             </div>
             <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
+              <h5>Actions</h5>
               Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
             </div>
           </section>
